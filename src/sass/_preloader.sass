@@ -1,0 +1,74 @@
+body
+  overflow: hidden
+.preloader
+  &-wrap
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: darken($grey-5, 20%)
+    z-index: 1000
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  opacity: 1
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 16px 9.5px 0 9.5px
+  border-color: #fff transparent transparent transparent
+
+  &-inner,
+  &-inner::after,
+  &-inner::before
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 9.5px 16px 9.5px
+    border-color: transparent transparent #fff  transparent
+    animation: pulse 1.5s ease-in-out infinite
+  &-inner
+    position: absolute
+    top: -35px
+    left: -9.5px
+    animation-delay: 0s
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      top: 20px
+    &::after
+      right: -22px
+      animation-delay: .1s
+    &::before
+      left: -21px
+      animation-delay: .5s
+
+  @media (min-width: $lg)
+    border-width: 20px 11.5px 0 11.5px
+    &-inner,
+    &-inner::after,
+    &-inner::before
+      border-width: 0 11.5px 20px 11.5px
+    &-inner
+      top: -45px
+      left: -11.5px
+      &::after,
+      &::before
+        top: 28px
+      &::after
+        right: -26px
+      &::before
+        left: -26px
+@keyframes pulse
+  0%
+    opacity: 0
+  33.333%
+    opacity: 1
+  100%
+    opacity: 0
+

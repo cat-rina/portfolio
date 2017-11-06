@@ -1,0 +1,160 @@
+.particles
+	height: 100%
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
+
+.bg
+	height: 100%
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	background-image: url('../images/bg-me.jpg')
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba($grey-1, .8)
+	@media (min-width: $lg)
+		background-image: none
+		&::after
+			background: $grey-1
+
+.first-screen
+	position: relative
+	z-index: 2
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	@supports (display: grid)
+		display: grid
+		grid-template-rows: auto 1fr
+
+
+.s-header
+	&-wrap
+		@extend .wrapper
+	padding-top: 20px
+	padding-bottom: 20px
+	@media (min-width: $xs), (orientation: landscape)
+		&-wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+.logo
+	width: 60px
+	height: 32.77px
+	&__img
+		display: block
+		width: 100%
+		height: 100%
+
+
+.menu
+	display: flex
+	justify-content: space-around
+	&__link
+		@extend .txt-xs,.txt--black-2
+		display: inline-block
+		line-height: 24px
+		text-transform: uppercase
+		transition: color .3s ease-in-out
+		&:hover,
+		&:focus
+			color: $hover-color
+		&:active
+			color: $active-color
+	@media (min-width: $xs), (orientation: landscape)
+		justify-content: space-between
+
+.intro
+	&-wrap
+		@extend .wrapper
+		flex: 1
+		margin-top: auto
+		margin-bottom: auto
+	max-width: 570px
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 3.5rem
+	@media (orientation: landscape) and (min-width: $md)
+		margin-right: 0
+
+	&-img-wrap
+		display: none
+		width: 400px
+		margin-left: auto
+		margin-right: auto
+		overflow: hidden
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)
+		transition: all .3s ease
+		&:hover,
+		&:focus
+			box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)
+			.intro-img
+				filter: grayscale(.5)
+	&-img
+		width: 100%
+		height: auto
+		filter: grayscale(.9)
+		transition: all .3s ease
+	@media (min-width: $lg)
+		&-wrap
+			display: flex
+			align-items: center
+		&-img-wrap
+			display: block
+
+.more
+	display: block
+	width: 50px
+	height: 50px
+	background: $topaz
+	border-radius: 50%
+	margin-left: auto
+	margin-right: auto
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 25px
+	animation: jump 1.5s ease-in-out infinite
+	transition: all .2s ease-in-out
+	&:hover,
+	&:focus
+		animation-play-state: paused
+		background: darken($topaz, 5%)
+
+	&::before
+		content: ''
+		display: block
+		width: 10px
+		height: 10px
+		border-left: 1px solid $white
+		border-bottom: 1px solid $white
+		margin: auto
+		transform: rotate(-45deg);
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+
+
+@keyframes jump
+	0%
+		transform: translateY(10px)
+	50%
+		transform: translateY(0)
+	100%
+		transform: translateY(10px)

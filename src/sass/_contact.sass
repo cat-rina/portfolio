@@ -1,0 +1,53 @@
+.contact
+	@extend .bg--white-1
+	padding-top: $s-padding
+	padding-bottom: $s-padding
+
+	&-wrap
+		@extend .wrapper
+
+	&__form,
+	&__content
+		max-width: 670px
+		margin-left: auto
+		margin-right: auto
+
+.hidden-iframe
+	display: none
+
+.g-form
+	width: 100%
+	margin-top: 2rem
+	text-align: center
+
+	&__general
+		@extend .txt-sm, .txt--grey-2
+		padding: 12px 20px
+		width: 100%
+		max-width: 100%
+		min-width: 100%
+		display: inline-block
+		border: none
+		outline: none
+		margin-bottom: 1.875rem
+
+	&__message
+		min-height: 170px
+
+	::-webkit-input-placeholder,
+	[placeholder]
+		@extend .txt-sm, .txt--grey-2
+
+	@media (min-width: $sm)
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		&__col-6
+			width: calc(50% - 1rem)
+			max-width: calc(50% - 1rem)
+			min-width: calc(50% - 1rem)
+
+		&__btn
+			margin-left: auto
+			margin-right: auto

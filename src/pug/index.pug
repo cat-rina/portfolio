@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title PORTFOLIO || Kateryna M.
+		link(rel="shortcut icon", href="images/favicon.png")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500%7CNunito+Sans", rel="preload", as="font")
+		link(href="css/main.min.css", rel="stylesheet")
+	body
+		include includes/_header.pug
+		main
+			include includes/_preloader.pug
+			include includes/_works.pug
+			include includes/_footer.pug
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="js/script.min.js")

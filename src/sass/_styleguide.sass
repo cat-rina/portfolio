@@ -1,0 +1,186 @@
+//grid
+.wrapper
+	width: 90%
+	max-width: $md
+	margin-left: auto
+	margin-right: auto
+	@media (min-width: $lg)
+		max-width: $wrap-width
+
+//colors
+.txt--white
+	color: $white
+
+.txt--grey-2
+	color: $grey-2
+.txt--grey-3
+	color: $grey-3
+.txt--grey-5
+	color: $grey-5
+.txt--grey-6
+	color: $grey-6
+.txt--grey-7
+	color: $grey-7
+
+.txt--black
+	color: $black
+.txt--black-1
+	color: $black-1
+.txt--black-2
+	color: $black-2
+.txt--black-3
+	color: $black-3
+.txt--black-4
+	color: $black-4
+
+.txt--topaz
+	color: $topaz
+
+.bg--white
+	background-color: $white
+.bg--white-1
+	background-color: $white-1
+.bg--white-2
+	background-color: $white-2
+
+.bg--grey-1
+	background-color: $grey-1
+.bg--grey-5
+	background-color: $grey-5
+.bg--grey-6
+	background-color: $grey-6
+
+.bg--black-4
+	background-color: $black-4
+
+.bg--topaz
+	background-color: $topaz
+
+
+//typography
+html
+	font-family: 'Montserrat', sans-serif
+	font-size: 12px
+	line-height: 1.2
+	@media (min-width: $sm)
+		font-size: 14px
+	@media (min-width: $md)
+		font-size: 16px
+
+.title-h1
+	@extend .txt--black-1
+	font-family: 'Montserrat', sans-serif
+	font-size: 2.375rem
+	font-weight: 500
+	line-height: 1.26
+	letter-spacing: 0.4px
+	text-align: center
+	margin-bottom: 2rem
+	@media (orientation: landscape) and (min-width: $md)
+		text-align: left
+
+.title-h2
+	@extend .txt--black-2
+	position: relative
+	z-index: 1
+	font-family: 'Montserrat', sans-serif
+	font-size: 1.875rem
+	font-weight: 500
+	line-height: 2
+	letter-spacing: 0.3px
+	text-align: center
+	text-transform: capitalize
+
+.title-h3
+	font-family: 'Montserrat', sans-serif
+	text-transform: capitalize
+	font-size: 30px
+	font-weight: 500
+	line-height: 2.8
+	letter-spacing: 0.3px
+	text-align: left
+
+.title-h4
+	font-family: 'Montserrat', sans-serif
+	font-size: 1rem
+	font-weight: 700
+	line-height: 2.5
+	letter-spacing: 1.2px
+	text-transform: uppercase
+
+.txt-lg
+	@extend .txt--white
+	font-family: 'Montserrat', sans-serif
+	font-size: 30px
+	font-weight: 500
+	line-height: 1.2
+	letter-spacing: 0.3px
+	text-align: center
+
+.txt-md
+	font-family: 'Montserrat', sans-serif
+	font-size: 18px
+	font-weight: 500
+
+.txt-default
+	@extend .txt--grey-2
+	font-family: 'Nunito Sans', sans-serif
+	font-size: 1rem
+	line-height: 1.5
+	letter-spacing: 0.1px
+	text-align: center
+
+.txt-sm
+	font-family: 'Nunito Sans', sans-serif
+	font-size: 0.9375rem
+	line-height: 1.6
+	letter-spacing: 0.1px
+	text-align: left
+
+.txt-xs
+	font-family: 'Montserrat', sans-serif
+	font-size: .75rem
+	font-weight: 500
+	letter-spacing: 1.2px
+
+.txt-slider
+	@extend .txt--grey-2
+	font-family: 'Nunito Sans', sans-serif
+	font-size: 1.125rem
+	line-height: 1.56
+	letter-spacing: 0.1px
+	margin-bottom: 2.5rem
+
+
+//buttons
+.btn
+	@extend .bg--topaz, .txt--white, .txt-xs
+	display: inline-block
+	cursor: pointer
+	text-transform: uppercase
+	text-decoration: none
+	line-height: 4.5
+	padding-left: 2.875rem
+	padding-right: 2.875rem
+	outline: none
+	border: none
+	transition: all .3s ease-in-out
+	&:hover,
+	&:focus
+		background-color: $hover-color
+	&:active
+		background-color: $active-color
+
+
+//forms
+.input-field
+	@extend .bg--white, .txt-sm, .txt--grey-2
+	outline: none
+	border: none
+	padding: 18px 20px
+	border: 1px solid transparent
+	&:focus
+		border-color: $grey-2
+	::-webkit-input-placeholder,
+	[placeholder]
+		color: rgba($grey-2, .8)

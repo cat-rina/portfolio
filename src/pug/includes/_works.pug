@@ -1,0 +1,42 @@
+article#works.works
+	h2.title-h2 Works
+	.works__example
+		mixin example(exampleLink, exampleImg, exampleTitle, exampleText)
+			a(href=exampleLink, target='_blank', data-scroll).example
+				img(src='images/works/works-'+exampleImg+'.jpg', alt=exampleTitle).example__img
+				.example__box
+					h4.title-h4= exampleTitle
+					img(src='images/see.png', alt='See more').example__see-more
+					p.example__txt!= exampleText
+		+example(
+			'https://cat-rina.github.io/David/',
+			'05',
+			'David',
+			'<span>html5</span> <span>css3</span> <span>jquery</span> <span>sass</span> <span>bem</span> <span>mobile first</span> <span>adaptive</span> <span>gulp</span>'
+		)
+		+example(
+			'https://cat-rina.github.io/Unbelievable-Ukraine/',
+			'04',
+			'Надзвичайна Україна',
+			'<span>html5</span> <span>css3</span> <span>jquery</span> <span>sass</span> <span>bem</span> <span>mobile first</span> <span>adaptive</span> <span>gulp</span> <span>ajax</span>'
+		)
+		+example(
+			'https://cat-rina.github.io/ICOkit/',
+			'03',
+			'ICOkit',
+			'<span>html5</span> <span>css3</span> <span>jquery</span> <span>sass</span> <span>bem</span> <span>mobile first</span> <span>adaptive</span> <span>gulp</span>'
+		)
+		+example(
+			'https://cat-rina.github.io/Renumax/',
+			'02',
+			'Renumax',
+			'<span>html5</span> <span>css3</span> <span>jquery</span> <span>sass</span> <span>bem</span> <span>mobile first</span> <span>adaptive</span> <span>gulp</span>'
+		)
+		+example(
+			'https://cat-rina.github.io/GYM/',
+			'01',
+			'GYM',
+			'<span>html5</span> <span>css3</span> <span>jquery</span> <span>mobile first</span> <span>adaptive</span> <span>pixel perfect</span>'
+		)
+		.example(data-scroll)
+			h4.title-h4.example__progress-title In Progress...
